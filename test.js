@@ -12,11 +12,11 @@ function divText(){
         // ToDoListArray is no longer an array of string.
         // It is an array of objects with 2 properties.
         // Extract it's properties values and put inside variables
+
         let todoObject = toDoListArray[i];
         let name = todoObject.name;
         let dueDate= todoObject.date;
         let todoListNames = `
-        
         <div>${name}</div>
         <div>${dueDate}</div>
         <button onclick="
@@ -25,9 +25,9 @@ function divText(){
         " class="js-button-css">Delete</button>
         `
         todoListHTML += todoListNames ;
-        document.querySelector('.js-todo-list')
-        .innerHTML =  todoListHTML;
     }
+    document.querySelector('.js-todo-list')
+        .innerHTML =  todoListHTML;
 }
 // Collect the input value & store it inside a variable (8)
 // Make the value empty after button is clicked (10)
