@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: beige;
+}
+
+
+.todo-input-grid{
+    display: grid;
+    grid-template-columns: 200px 200px 100px;
+    column-gap: 30px;
+    row-gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.add-button-css {
+    font-size: 15px;
+    background-color: green;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.input-task-css {
+    font-size: 15px;
+    padding: 10px 5px;
+}
+
+.input-date-css {
+    font-size: 15px;
+    padding: 7.5px 5px;
+}
+
+.js-button-css {
+    font-size: 15px;
+    border: none;
+    background-color: darkred;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px 0;
+    cursor: pointer;
+}
