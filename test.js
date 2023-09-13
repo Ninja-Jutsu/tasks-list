@@ -1,4 +1,4 @@
-const toDoListArray = [];
+const toDoListArray = JSON.parse(localStorage.getItem('savedList'));
 divText();
 
 // Loop through every value of the array
@@ -46,6 +46,9 @@ function addTask(){
     });
     inputElement.value ='';
     inputDateElement.value=''; //in order to have inputs restored
+    localStorage.setItem('savedList', JSON.stringify(toDoListArray))
     divText();
+    }
+    return (JSON.parse(localStorage.getItem('savedList')));
 }
-}
+console.log(toDoListArray);
