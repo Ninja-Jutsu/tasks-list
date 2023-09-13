@@ -39,10 +39,13 @@ function addTask(){
     const inputDateElement = document.querySelector('.js-duedate');
     const dueDate = inputDateElement.value;
 
+    if (task !== '' && dueDate !== ''){
     toDoListArray.push({
         name:task,
         date:dueDate
     });
     inputElement.value ='';
+    inputDateElement.value=''; //in order to have inputs restored
     divText();
+}
 }
