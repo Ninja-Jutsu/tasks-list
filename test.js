@@ -16,16 +16,18 @@ function divText(){
         // Extract it's properties values and put inside variables
 
         let todoObject = toDoListArray[i];
-        let name = todoObject.name;
-        let dueDate= todoObject.date;
+        let verb = todoObject.verb;
+        let example= todoObject.example;
+        let noun= todoObject.noun;
         let todoListNames = `
-        <div>${name}</div>
-        <div>${dueDate}</div>
+        <div>${verb}</div>
+        <div>${example}</div>
+        <div>${noun}</div>
         <button onclick="
                 toDoListArray.splice(${i},1);
                 divText();
         " class="js-button-css">Delete</button>
-        `
+        `; // The generated HTML
         todoListHTML += todoListNames ; // HTML accumulator
     }
 
@@ -40,19 +42,24 @@ function divText(){
 
 function addTask(){
     const inputElement = document.querySelector('.js-input');
-    const task = inputElement.value;
+    const verb = inputElement.value;
 
-    const inputDateElement = document.querySelector('.js-duedate');
-    const dueDate = inputDateElement.value;
+    const inputExampleElement = document.querySelector('.js-duedate');
+    const example = inputExampleElement.value;
 
-    if (task !== '' && dueDate !== ''){
+    const inputNounElement = document.querySelector('.js-noun');
+    const noun = inputNounElement.value;
+
+    if (verb !== '' && example !== ''){
     toDoListArray.push({
-        name:task,
-        date:dueDate
+        verb:verb,
+        example:example,
+        noun: noun
     });
     inputElement.value ='';
-    inputDateElement.value=''; //in order to have inputs restored
-    
+    inputExampleElement.value=''; //in order to have inputs restored
+    inputNounElement.value='';
+    console.log(toDoListArray)
     divText();
     }
 }
