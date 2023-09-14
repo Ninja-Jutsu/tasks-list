@@ -1,2 +1,2 @@
-# tasks-list
-A Simple Tasks List
+# Vocabulary List
+A Simple Vocabulary list ( Verb + Example + Noun)

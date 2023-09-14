@@ -2,7 +2,6 @@ let toDoListArray = JSON.parse(localStorage.getItem('savedList')); // The Array 
 divText(); // Call the function outside in order for the LocalStorage to be updated.
 
 
-
 function divText(){
 // Loop through every value of the array
 // Turn the values into paragraphs to put inside <div> (12)
@@ -59,10 +58,26 @@ function addTask(){
     inputElement.value ='';
     inputExampleElement.value=''; //in order to have inputs restored
     inputNounElement.value='';
-    console.log(toDoListArray)
     divText();
     }
 }
 
+
+// let loginData = [];
+// function login(){
+//     const inputUserElement = document.querySelector('.username');
+//     const userName = inputUserElement.value;
+//     console.log(userName)
+//     const inputPasswordElement = document.querySelector('.pwd');
+//     const password = inputPasswordElement.value;
+//     console.log(password)
+//     loginData.push({
+//         user:userName,
+//         password:password
+//     });
+
+//     inputUserElement.value ='';
+//     inputPasswordElement.value='';
+// }
 
 
